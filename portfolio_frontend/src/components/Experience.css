@@ -1,0 +1,47 @@
+/* src/components/Experience.css */
+
+#experience {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.experience-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;  
+}
+
+.experience-item {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.company-designation {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.responsibilities {
+    list-style: inside;
+    padding: 0;
+    margin: 0;
+}
+
+.responsibilities li {
+    margin-bottom: 5px;
+}

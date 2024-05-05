@@ -1,0 +1,91 @@
+/* src/components/Navbar.css */
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure full width of the navbar container */
+    justify-content: space-between; /* Align logo to the left and menu icon to the right */
+}
+
+.navbar-logo {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-right: 1rem; /* Add right margin for spacing */
+    color: #fff; /* Set navbrand color to white */
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: auto; /* Align menu icon to the right */
+}
+
+/* Navlinks */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-links {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 960px) {
+    .navbar-container {
+        justify-content: flex-start; /* Align all content to the left */
+    }
+
+    .menu-icon {
+        display: block; /* Display menu icon for mobile */
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Start off-canvas menu off-screen */
+        width: 50%;
+        height: 100vh;
+        background-color: #333;
+        flex-direction: column;
+        justify-content: flex-start; /* Align links to the top */
+        align-items: center;
+        padding-top: 20%; /* Adjusted for top spacing */
+        padding-bottom: 20%; /* Adjusted for bottom spacing */
+        transition: left 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        left: 0; /* Slide in the menu when active */
+    }
+
+    .nav-item {
+        margin: 1rem 0; /* Add margin top and bottom for spacing */
+    }
+}
+
+/* Hide hamburger and close symbol on larger screens */
+@media screen and (min-width: 961px) {
+    .menu-icon {
+        display: none;
+    }
+}

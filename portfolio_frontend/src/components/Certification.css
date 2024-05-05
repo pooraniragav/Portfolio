@@ -1,0 +1,54 @@
+/* src/components/Certification.css */
+
+#certification {
+    padding: 60px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.certification-list {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    gap: 20px;
+}
+
+.certification-item {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.certification-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.certification-details {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Media Query for Responsive Design */
+@media screen and (min-width: 768px) {
+    .certification-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .certification-item {
+        width: calc(50% - 10px); /* Adjust for margin */
+    }
+}
